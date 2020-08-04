@@ -1,5 +1,14 @@
+body {
+  background-color: var(--color-gray-light);
+}
+
+.heading {
+  background-color: white;
+}
+
 .section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }

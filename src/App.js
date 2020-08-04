@@ -5,21 +5,32 @@ import Title from './components/elements/Title';
 import Text from './components/elements/Text';
 import Button from './components/elements/Button';
 import ShortenerBox from './components';
+import Steps from './components/Steps';
 
 function App() {
   return (
     <div className="App" style={{ marginBottom: 500 }}>
-      <Navbar />
-      <Hero />
-      <Title text="More than just shorter links" />
-      <Text>
-        Build your brand's recognition and get detailed insights on how your
-        links are performing.
-      </Text>
-      <div className="section">
-        <Button title="Get Started" rounded />
+      <div className="heading">
+        <Navbar />
+        <Hero />
+        <Title text="More than just shorter links" />
+        <Text>
+          Build your brand's recognition and get detailed insights on how your
+          links are performing.
+        </Text>
+        <div className="section">
+          <Button title="Get Started" rounded />
+        </div>
       </div>
       <ShortenerBox />
+      <div className="section">
+        <h1 className="Title">Advanced Statistics</h1>
+        <p className="Text">
+          Track how your links are performing across the web with our advanced
+          statistics dashboard.
+        </p>
+        <Steps />
+      </div>
     </div>
   );
 }
