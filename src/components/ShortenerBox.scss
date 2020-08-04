@@ -1,0 +1,32 @@
+.ShortenerBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 360px;
+  background: linear-gradient(to bottom, white 0%,white 50%,var(--color-gray-light) 51%,var(--color-gray-light) 100%);
+}
+
+.ShortenerBox__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--color-secondary);
+  height: 120px;
+  width: 75%;
+  background-image: url("/assets/bg-shorten-mobile.svg");
+  background-position: right top;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+
+  button {
+    width: 95%;
+    height: 50%;
+    font-size: 20px;
+    padding: 12px 45px;
+    margin-top: 5px;
+  }
+}
+
