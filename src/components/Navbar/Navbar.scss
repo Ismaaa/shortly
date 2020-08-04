@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem;
+  padding: 22.5px;
+  margin-bottom: 20px;
 }
 
 .Navbar__burger {
@@ -11,6 +12,7 @@
   flex-direction: column;
   width: 35px;
   height: 26px;
+  cursor: pointer;
 }
 
 .Navbar__burger-slice {

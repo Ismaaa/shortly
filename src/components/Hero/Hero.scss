@@ -1,10 +1,9 @@
 .Hero {
-  position: relative;
-  height: 330px;
-}
-
-.Hero__image {
-  position: absolute;
-  top: 30px;
-  right: -40px;
+  width: 100%;
+  height: 340px;
+  background-image: url("/assets/illustration-working.svg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
 }
