@@ -4,11 +4,13 @@ import links from './links.json';
 const Footer = () => {
   const renderLinks = () =>
     Object.values(links).map((link) => (
-      <div className="Footer__linkGroup">
+      <div key={link.title} className="Footer__linkGroup">
         <h1 className="Footer__linkTitle">{link.title}</h1>
         <div className="Footer__linkChildren">
           {link.items.map((item) => (
-            <span className="Footer__linkSubItem">{item}</span>
+            <span key={item} className="Footer__linkSubItem">
+              {item}
+            </span>
           ))}
         </div>
       </div>
