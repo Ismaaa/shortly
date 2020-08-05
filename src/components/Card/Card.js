@@ -10,6 +10,10 @@ const Card = ({ image, title, description, line }) => (
   </div>
 );
 
+Card.defaultProps = {
+  line: false,
+};
+
 Card.propTypes = {
   image: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
