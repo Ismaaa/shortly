@@ -9,10 +9,11 @@ import ShortenerBox from './components/ShortenerBox';
 import Steps from './components/Steps';
 import Subtitle from './components/elements/Subtitle';
 import Cta from './components/Cta';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App" style={{ marginBottom: 500 }}>
+    <div className="App">
       <div className="heading">
         <Navbar />
         <Hero />
@@ -35,6 +36,7 @@ function App() {
         <Steps />
       </div>
       <Cta text="Boost your links today" />
+      <Footer />
     </div>
   );
 }
