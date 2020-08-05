@@ -5,8 +5,6 @@ const INITIAL_STATE = {
   error: null,
 };
 
-const API_URL = 'https://rel.ink/api/links';
-
 const SEND_REQUEST = 'SEND_REQUEST';
 const SET_SUCCESS = 'SET_SUCCESS';
 const SET_ERROR = 'SET_ERROR';
