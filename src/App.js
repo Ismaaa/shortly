@@ -1,12 +1,14 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Title from './components/elements/Title';
 import Text from './components/elements/Text';
 import Button from './components/elements/Button';
-import ShortenerBox from './components';
+import ShortenerBox from './components/ShortenerBox';
 import Steps from './components/Steps';
 import Subtitle from './components/elements/Subtitle';
+import Cta from './components/Cta';
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
         </p>
         <Steps />
       </div>
+      <Cta text="Boost your links today" />
     </div>
   );
 }
