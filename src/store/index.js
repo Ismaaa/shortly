@@ -2,10 +2,10 @@ import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 
 import { logger } from 'redux-logger/src';
-import linksReducer from './ducks/links/index';
+import apiReducer from './ducks/api';
 
 const rootReducer = combineReducers({
-  links: linksReducer,
+  api: apiReducer,
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
