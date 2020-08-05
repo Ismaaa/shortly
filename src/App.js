@@ -6,6 +6,7 @@ import Text from './components/elements/Text';
 import Button from './components/elements/Button';
 import ShortenerBox from './components';
 import Steps from './components/Steps';
+import Subtitle from './components/elements/Subtitle';
 
 function App() {
   return (
@@ -24,8 +25,8 @@ function App() {
       </div>
       <ShortenerBox />
       <div className="section">
-        <h1 className="Title">Advanced Statistics</h1>
-        <p className="Text">
+        <Subtitle text="Advanced Statistics" />
+        <p className="Text Text--smaller">
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>

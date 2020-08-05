@@ -3,5 +3,11 @@
   letter-spacing: 1px;
   text-align: center;
   line-height: 28px;
-  margin: 0 12px 40px;
+  margin: 0 12px 35px;
+
+  &--smaller {
+    font-size: 15px;
+    margin: 0 40px 45px;
+    letter-spacing: 0;
+  }
 }

@@ -5,7 +5,6 @@
   align-items: center;
   background-color: var(--color-white);
   max-width: 80%;
-  min-height: 300px;
   margin: 40px auto 80px;
   position: relative;
   z-index: 20;
@@ -28,12 +27,17 @@
 }
 
 .Card__title {
-  margin-top: 85px;
+  font-size: 20px;
+  margin-top: 70px;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 
 .Card__description {
-  max-width: 87%;
+  max-width: 82%;
+  font-size: 14px;
+  line-height: normal;
+  letter-spacing: normal;
 }
 
 .Card__line {
