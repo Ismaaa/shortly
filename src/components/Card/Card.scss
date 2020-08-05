@@ -1,0 +1,38 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  max-width: 80%;
+  min-height: 300px;
+  margin: 40px auto 80px;
+  position: relative;
+  z-index: 20;
+}
+
+.Card__image {
+  position: absolute;
+  top: -50px;
+  background-color: var(--color-secondary);
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.Card__title {
+  margin-top: 85px;
+  margin-bottom: 20px;
+}
+
+.Card__description {
+  max-width: 87%;
+}
+
+.Card__line {
+  width: 200px;
+  border: 5px solid var(--color-primary);
+  position: absolute;
+  bottom: -120px;
+  transform: rotate(90deg);
+  z-index: 10;
+}
