@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Input = ({ placeholder, handleChange, type, error }) => (
+const Input = ({ name, placeholder, handleChange, type, error }) => (
   <input
+    name={name}
     className={`Input ${error && 'Input--error'}`}
     placeholder={placeholder}
     type={type}
@@ -18,6 +19,7 @@ Input.defaultProps = {
 };
 
 Input.propTypes = {
+  name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   handleChange: PropTypes.func.isRequired,
   type: PropTypes.string,
