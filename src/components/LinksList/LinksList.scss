@@ -16,7 +16,11 @@
   background-color: var(--color-white);
   margin-bottom: 18px;
   padding: 28px;
-  width: 78%;
+  width: 76%;
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+  }
 }
 
 .LinksList__link {
@@ -25,6 +29,11 @@
   word-wrap: break-word;
   width: 100%;
   margin-bottom: 25px;
+
+  @media screen and (min-width: 1440px) {
+    word-break: break-word;
+    margin: 0 35px 0 0;
+  }
 }
 
 .LinksList__actions {
@@ -33,6 +42,10 @@
   justify-content: center;
   align-items: center;
   flex: 1;
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+  }
 }
 
 .LinksList__generatedLink {
@@ -41,4 +54,8 @@
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 25px;
+
+  @media screen and (min-width: 1440px) {
+    margin: 0 25px 0 0;
+  }
 }

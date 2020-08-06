@@ -28,6 +28,15 @@
   &:focus {
     border: none;
   }
+
+  &--alternative, &--alternative:hover {
+    background-color: var(--color-secondary);
+  }
+
+  &--rectangle {
+    border-radius: 4px;
+    padding: 8px 35px;
+  }
 }
 
 .Button--rounded {
