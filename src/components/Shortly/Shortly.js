@@ -10,6 +10,7 @@ import Subtitle from '../elements/Subtitle';
 import Steps from '../Steps';
 import Cta from '../Cta';
 import Footer from '../Footer';
+import LinksList from '../LinksList';
 
 function Shortly() {
   return (
@@ -27,6 +28,7 @@ function Shortly() {
         </div>
       </div>
       <ShortenerBox />
+      <LinksList />
       <div className="section">
         <Subtitle text="Advanced Statistics" />
         <p className="Text Text--smaller">
