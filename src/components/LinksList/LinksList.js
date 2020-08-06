@@ -20,7 +20,13 @@ const LinksList = () => {
     setValue(links);
   }, [links]);
 
-  return links.map((link) => <LinkItem key={uuidv4()} link={link} />);
+  return (
+    <div className="LinksList">
+      {links.map((link) => (
+        <LinkItem key={uuidv4()} link={link} />
+      ))}
+    </div>
+  );
 };
 
 export default LinksList;
