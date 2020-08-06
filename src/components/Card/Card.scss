@@ -9,6 +9,10 @@
   position: relative;
   z-index: 20;
   border-radius: 8px;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 330px;
+  }
 }
 
 .Card__imageContainer {
@@ -21,6 +25,10 @@
   width: 85px;
   height: 85px;
   background-color: var(--color-secondary);
+
+  @media screen and (min-width: 1440px) {
+   left: 30px;
+  }
 }
 
 .Card__image {
@@ -39,6 +47,10 @@
   font-size: 14px;
   line-height: normal;
   letter-spacing: normal;
+
+  @media screen and (min-width: 1440px) {
+    text-align: left;
+  }
 }
 
 .Card__line {
@@ -48,4 +60,11 @@
   bottom: -120px;
   transform: rotate(90deg);
   z-index: 10;
+
+  @media screen and (min-width: 1440px) {
+    width: 500px;
+    transform: rotate(0deg);
+    bottom: 80px;
+    left: 331px;
+  }
 }
