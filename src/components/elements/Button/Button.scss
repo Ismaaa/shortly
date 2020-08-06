@@ -8,6 +8,7 @@
   color: var(--color-white);
   border-radius: 10px;
   cursor: pointer;
+  z-index: 20;
 
   &--small {
     padding: 8px 25px;
@@ -19,6 +20,10 @@
       align-self: flex-start;
       justify-self: flex-start;
     }
+  }
+
+  &:hover {
+    background-color: var(--color-primary-light);
   }
 
   &:focus {

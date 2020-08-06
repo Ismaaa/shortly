@@ -9,6 +9,12 @@
   background-color: var(--color-secondary);
   background-position: right top;
   background-repeat: no-repeat;
+
+  @media screen and (min-width: 1440px) {
+    background-image: url("/assets/bg-boost-desktop.svg");
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 .Cta__title {

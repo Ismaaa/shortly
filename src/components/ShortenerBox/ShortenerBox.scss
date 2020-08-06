@@ -22,12 +22,26 @@
   border-radius: 15px;
   max-width: 1300px;
 
+  @media screen and (min-width: 1440px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-image: url("/assets/bg-shorten-desktop.svg");
+    background-position: center;
+    background-size: cover;
+  }
+
   button {
     width: 100%;
     height: 50%;
     font-size: 20px;
     padding: 12px 45px;
     margin-top: 5px;
+
+    @media screen and (min-width: 1440px) {
+      max-width: 200px;
+      margin-top: 0;
+    }
   }
 }
 
