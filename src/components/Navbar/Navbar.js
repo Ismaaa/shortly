@@ -3,7 +3,7 @@ import Button from '../elements/Button';
 
 const Navbar = () => (
   <nav className="Navbar">
-    <img src="/assets/logo.svg" alt="Shortly" />
+    <img src="/assets/logo.svg" alt="Shortly" className="Navbar__logo" />
     <div className="Navbar__links">
       <div className="Navbar__navigation">
         <div className="Navbar__navigationItem">Features</div>
