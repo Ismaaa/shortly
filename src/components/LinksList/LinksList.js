@@ -20,7 +20,7 @@ const LinksList = () => {
     setValue(links);
   }, [links]);
 
-  if (Object.values(links).length === 0) return <div />;
+  if (links && Object.values(links).length === 0) return <div />;
 
   return (
     <div className="LinksList">
