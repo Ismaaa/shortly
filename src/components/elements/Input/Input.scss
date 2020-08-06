@@ -1,5 +1,5 @@
 .Input {
-  width: 89%;
+  width: 100%;
   height: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -9,6 +9,7 @@
   line-height: 28px;
   font-weight: 700;
   font-size: 18px;
+  box-sizing: border-box;
 
   &::placeholder {
     color: var(--color-secondary-light);

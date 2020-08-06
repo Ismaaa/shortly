@@ -28,7 +28,7 @@ function Shortly() {
         </div>
       </div>
       <ShortenerBox />
-      <LinksList />
+      {/* <LinksList /> */}
       <div className="section">
         <Subtitle text="Advanced Statistics" />
         <p className="Text Text--smaller">
