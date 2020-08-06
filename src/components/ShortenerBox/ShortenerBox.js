@@ -32,6 +32,7 @@ const ShortenerBox = () => {
       <form className="ShortenerBox__box" action="/">
         <Input
           id="link"
+          name="url"
           type="url"
           placeholder="Shorten a link here..."
           value={link}
