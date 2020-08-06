@@ -20,6 +20,8 @@ const LinksList = () => {
     setValue(links);
   }, [links]);
 
+  if (Object.values(links).length === 0) return <div />;
+
   return (
     <div className="LinksList">
       {links.map((link) => (
