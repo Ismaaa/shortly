@@ -8,7 +8,7 @@ import { setLinks } from '../../store/ducks/links';
 const LinksList = () => {
   const dispatch = useDispatch();
   const { links } = useSelector((store) => store.links);
-  const [value, setValue] = useLocalStorage('links');
+  const [value, setValue] = useLocalStorage('links', []);
 
   // storage to state
   useEffect(() => {
@@ -20,7 +20,7 @@ const LinksList = () => {
     setValue(links);
   }, [links]);
 
-  if (links && Object.values(links).length === 0) return <div />;
+  if (links.length === 0) return <div />;
 
   return (
     <div className="LinksList">
