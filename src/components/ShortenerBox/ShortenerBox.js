@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Button from '../elements/Button';
 import Input from '../elements/Input';
-import apiRequester from '../../services/apiRequester';
 import API from '../../config/contants/api';
+import { apiRequest } from '../../store/ducks/api';
 
 const ShortenerBox = () => {
   const [link, setLink] = useState(null);
+  const dispatch = useDispatch();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    apiRequester('POST', `${API.shortener}`, {
-      url: link,
-    });
+
+    dispatch(
+      apiRequest('POST', `${API.shortener}`, {
+        url: link,
+      }),
+    );
   };
 
   return (

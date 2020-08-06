@@ -1,65 +1,66 @@
 // constants
+import axios from 'axios';
+import { addLink } from '../links';
+
 const INITIAL_STATE = {
   data: null,
   loading: false,
   error: null,
 };
 
-const API_URL = 'https://rel.ink/api/links/';
-
-const SET_LOADING = 'SET_LOADING';
-const SET_DATA = 'SET_DATA';
-const SET_ERROR = 'SET_ERROR';
+const API_REQUEST = 'API_REQUEST';
+const API_SUCCESS = 'API_SUCCESS';
+const API_ERROR = 'API_ERROR';
 
 // reducer
 export default function reducer(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case SET_LOADING:
-      return { ...state, loading: action.payload };
-    case SET_DATA:
-      return { ...state, data: action.payload };
-    case SET_ERROR:
-      return { ...state, error: action.payload };
+    case API_REQUEST:
+      return { ...state, error: null, loading: true, data: null };
+    case API_SUCCESS:
+      return { ...state, loading: false, data: action.payload };
+    case API_ERROR:
+      return { ...state, loading: false, error: action.payload };
     default:
       return state;
   }
 }
 
 // actions
-export const setLoading = (loading) => async (dispatch) => {
+export const apiSuccess = (payload) => async (dispatch) => {
   dispatch({
-    type: SET_LOADING,
-    payload: loading,
+    type: API_SUCCESS,
+    payload,
   });
 };
 
-export const setData = (data) => async (dispatch) => {
+export const apiError = (payload) => async (dispatch) => {
   dispatch({
-    type: SET_DATA,
-    payload: data,
+    type: API_ERROR,
+    payload,
   });
 };
 
-export const setError = (error) => async (dispatch) => {
-  dispatch({
-    type: SET_ERROR,
-    payload: error,
-  });
-};
-
-export const shortenLink = (link) => async (dispatch) => {
-  dispatch(setLoading(true));
-
-  await fetch(API_URL, {
-    method: 'POST',
-    body: JSON.stringify({ url: link }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
+export const apiRequest = (method, url, data) => async (dispatch) => {
+  dispatch({ type: API_REQUEST });
+  await axios({
+    method,
+    url,
+    data,
   })
-    .then((res) => res.json())
-    .then((res) => dispatch(setData(res)))
-    .catch((exception) => setError(exception));
+    .then((res) => {
+      dispatch(apiSuccess(res.data));
+    })
+    .catch((exception) => {
+      console.error(exception);
+    });
+};
 
-  dispatch(setLoading(false));
+// middleware
+export const apiMiddleware = ({ dispatch }) => (next) => (action) => {
+  next(action);
+
+  if (action.type === API_SUCCESS) {
+    dispatch(addLink(action.payload));
+  }
 };
