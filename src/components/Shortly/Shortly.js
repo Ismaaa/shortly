@@ -11,21 +11,15 @@ import Steps from '../Steps';
 import Cta from '../Cta';
 import Footer from '../Footer';
 import LinksList from '../LinksList';
+import Headline from '../Headline';
 
 function Shortly() {
   return (
     <div className="Shortly">
+      <Navbar />
       <div className="heading">
-        <Navbar />
         <Hero />
-        <Title text="More than just shorter links" />
-        <Text>
-          Build your brand's recognition and get detailed insights on how your
-          links are performing.
-        </Text>
-        <div className="section">
-          <Button title="Get Started" rounded />
-        </div>
+        <Headline />
       </div>
       <ShortenerBox />
       {/* <LinksList /> */}

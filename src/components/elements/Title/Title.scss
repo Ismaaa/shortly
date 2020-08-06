@@ -4,4 +4,9 @@
   font-weight: 700;
   text-align: center;
   color: var(--color-secondary-darker);
+
+  @media screen and (min-width: 1440px) {
+    font-size: 67px;
+    text-align: left;
+  }
 }
