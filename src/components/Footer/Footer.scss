@@ -5,10 +5,32 @@
   align-items: center;
   padding: 50px;
   background-color: var(--color-secondary-darker);
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 150px;
+  }
 }
 
 .Footer__logo {
   margin-bottom: 15px;
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 0;
+    margin-top: 30px;
+  }
+}
+
+.Footer__companyLinks {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+  }
 }
 
 .Footer__linkGroup {
@@ -16,12 +38,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media screen and (min-width: 1440px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 
 .Footer__linkTitle {
-  color: var(--color-gray-light);
+  color: var(--color-white);
   margin-top: 30px;
   margin-bottom: 20px;
+  font-weight: 700;
 
 }
 
@@ -37,6 +65,17 @@
   display: block;
   font-size: 13px;
   margin-bottom: 10px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-primary);
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 13px;
+  }
 }
 
 .Footer__socialLinks {
@@ -44,6 +83,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+
+  img:hover {
+    filter: invert(0%) sepia(49%) saturate(7353%) hue-rotate(127deg) brightness(85%) contrast(88%);
+  }
 
   & > * {
     margin: 40px 10px 0;

@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <footer className="Footer">
       <img src="/assets/logo-white.svg" alt="Logo" className="Footer__logo" />
-      {renderLinks()}
+      <div className="Footer__companyLinks">{renderLinks()}</div>
       <div className="Footer__socialLinks">
         <img src="/assets/icon-facebook.svg" alt="Facebook" />
         <img src="/assets/icon-twitter.svg" alt="Twitter" />
