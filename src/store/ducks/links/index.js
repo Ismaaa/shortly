@@ -4,6 +4,7 @@ const INITIAL_STATE = {
 };
 
 const ADD_LINK = 'ADD_LINK';
+const SET_LINKS = 'SET_LINKS';
 
 // reducer
 export default function reducer(state = INITIAL_STATE, action) {
@@ -17,6 +18,8 @@ export default function reducer(state = INITIAL_STATE, action) {
         links: [...links],
       };
     }
+    case SET_LINKS:
+      return { ...state, links: action.payload };
     default:
       return state;
   }
@@ -26,6 +29,13 @@ export default function reducer(state = INITIAL_STATE, action) {
 export const addLink = (payload) => async (dispatch) => {
   dispatch({
     type: ADD_LINK,
+    payload,
+  });
+};
+
+export const setLinks = (payload) => async (dispatch) => {
+  dispatch({
+    type: SET_LINKS,
     payload,
   });
 };

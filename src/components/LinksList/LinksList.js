@@ -1,11 +1,24 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
 import LinkItem from './LinkItem';
+import useLocalStorage from '../../hooks/useStorage';
+import { setLinks } from '../../store/ducks/links';
 
 const LinksList = () => {
+  const dispatch = useDispatch();
   const { links } = useSelector((store) => store.links);
+  const [value, setValue] = useLocalStorage('links');
 
-  return links.map((link) => <LinkItem key={link.id} link={link} />);
+  useEffect(() => {
+    dispatch(setLinks(value));
+  }, []);
+
+  useEffect(() => {
+    setValue(links);
+  }, [links]);
+
+  return links.map((link) => <LinkItem key={uuidv4()} link={link} />);
 };
 
 export default LinksList;
