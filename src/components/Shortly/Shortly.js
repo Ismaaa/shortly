@@ -2,9 +2,6 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Hero from '../Hero';
-import Title from '../elements/Title';
-import Text from '../elements/Text';
-import Button from '../elements/Button';
 import ShortenerBox from '../ShortenerBox';
 import Subtitle from '../elements/Subtitle';
 import Steps from '../Steps';
@@ -22,7 +19,7 @@ function Shortly() {
         <Headline />
       </div>
       <ShortenerBox />
-      {/* <LinksList /> */}
+      <LinksList />
       <div className="section">
         <Subtitle text="Advanced Statistics" />
         <p className="Text Text--smaller">

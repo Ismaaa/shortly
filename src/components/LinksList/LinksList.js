@@ -10,10 +10,12 @@ const LinksList = () => {
   const { links } = useSelector((store) => store.links);
   const [value, setValue] = useLocalStorage('links');
 
+  // storage to state
   useEffect(() => {
     dispatch(setLinks(value));
   }, []);
 
+  // state to storage
   useEffect(() => {
     setValue(links);
   }, [links]);
