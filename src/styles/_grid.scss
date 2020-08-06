@@ -1,5 +1,9 @@
 body {
   background-color: var(--color-gray-light);
+
+  * {
+    outline: none;
+  }
 }
 
 .heading {
