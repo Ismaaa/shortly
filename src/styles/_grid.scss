@@ -12,6 +12,8 @@ body {
   @media screen and (min-width: 1440px) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
     padding-top: 70px;
   }
 }
