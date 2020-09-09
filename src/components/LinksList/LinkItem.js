@@ -23,7 +23,7 @@ const LinkItem = ({ link }) => {
           target="_blank"
           rel="noreferrer"
         >
-          https://rel.ink/${link.hashid}
+          https://rel.ink/{link.hashid}
         </a>
         <CopyToClipboard
           onCopy={handleCopy}
